@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +8,27 @@
     <title>5 Day Weather Forecast</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1 id="Para1"> 5 Day Weather Forcast</h1>
-    <p id="inputContainer">City: <input type="text"></p>
+    <center>
+        <h1 id="Para1"> 5 Day Weather Forcast</h1>
+    <p id="inputContainer">City: <input type="text" id="cityInput"></p>
+    <button>Click Me</button>
+    <h2 id="cityName">--Dallas--</h2>
 
-
-
-    <script scr"main.js"
+    </center>
+    <div> id="weatherContainer">
+        <div> id="inputContainer">
+            <div> class="icons">
+                <p> class="weather" id="day1"></p>
+                <div> class="image"><img src="weather.jpg" class="imgClass" id="img1"alt="">
+                <p>class="minValue" id="day1Min">Loading....</p>
+                <p>class="maxValue" id="day1Max">Loading....</p>
+            </div>
+        </div>
+    <div>    
+    </body>  
+    <script scr="script.js"></script>
 </body>
+
 </html>
