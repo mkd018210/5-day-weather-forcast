@@ -17,23 +17,27 @@ fetch("https://api.openweathermap.org/data/2.5/forecast?q='+newName.value+'&appi
             document.getElementById("img" + (i + 1)).src = "https://openweathermap.org/img/wn/" + data.list[1].weather[0].icon + ".png";
         })
 
+}       
 
-    .catch(err => alert("Something Went Wrong"))
+
+function defaultScreen() {
+    document.getElementById("cityInput").defaultValue = "Dallas";
+    getInfo();
 }
 
 
-const d =new Date();
-const weekday =["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const d = new Date();
+const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-function checkDay(day){
-    if(day +d.getDay() > 6){
-        return day +day.getDay()-7;
+function checkDay(day) {
+    if (day + d.getDay() > 6) {
+        return day + day.getDay() - 7;
     }
-    else{
-        return day +day.getDay();
+    else {
+        return day + day.getDay();
     }
 }
 
-for(i=0;1<5;i++){
-    document.getElementById("day"+(1+1)).innerHTML = weekday[checkDay(1)];
+for (i = 0; 1 < 5; i++) {
+    document.getElementById("day" + (1 + 1)).innerHTML = weekday[checkDay(1)];
 }
